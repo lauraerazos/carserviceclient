@@ -1,3 +1,8 @@
 .giphy {
     margin: 10px;
   }
+
+.vertical{
+  display: block;
+  width: 50%;
+}

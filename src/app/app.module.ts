@@ -13,6 +13,8 @@ import { CarEditComponent } from './car-edit/car-edit.component';
 import { FormsModule } from '@angular/forms';
 import { OwnerEditComponent } from './owner/owner-edit/owner-edit.component';
 import { OwnerListComponent } from './owner/owner-list/owner-list.component';
+import { MaterialModule } from './material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { OwnerListComponent } from './owner/owner-list/owner-list.component';
     MatInputModule,
     MatListModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

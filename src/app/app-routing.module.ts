@@ -24,6 +24,10 @@ const routes: Routes = [
     component: OwnerListComponent
   },
   {
+    path: 'owner-add',
+    component: OwnerEditComponent
+  },
+  {
     path: 'owner-edit/:dni',
     component: OwnerEditComponent
   }

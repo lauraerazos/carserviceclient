@@ -26,6 +26,7 @@ export class OwnerEditComponent implements OnInit, OnDestroy {
         this.ownerService.get(id).subscribe((owner: any) => {
           if (owner) {
             this.owner = owner._embedded.owners[0];
+            console.log(this.owner);
             this.owner.href = owner._embedded.owners[0]._links.self.href;
           } else {
             console.log(`Owner with id '${id}' not found, returning to list`);
