@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, forkJoin } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class CarService {
@@ -26,6 +26,12 @@ export class CarService {
       result = this.http.post(this.CAR_API, car);
     }
     return result;
+  }
+
+  dissasociateCars(cars: any[]) {
+    console.log('cars', cars);
+    const carsToUpdate = cars.map(car => this.http.put(`${this.CAR_API}/${car.id}`, { ...car, ownerDni: null }));
+    return forkJoin(carsToUpdate);
   }
 
   remove(href: string) {

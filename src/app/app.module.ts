@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { OwnerEditComponent } from './owner/owner-edit/owner-edit.component';
 import { OwnerListComponent } from './owner/owner-list/owner-list.component';
 import { MaterialModule } from './material/material.module';
+import { OwnerDeleteComponent } from './owner/owner-delete/owner-delete.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MaterialModule } from './material/material.module';
     CarListComponent,
     CarEditComponent,
     OwnerEditComponent,
-    OwnerListComponent
+    OwnerListComponent,
+    OwnerDeleteComponent
   ],
   imports: [
     BrowserModule,

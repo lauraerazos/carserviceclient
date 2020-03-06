@@ -4,9 +4,10 @@
     <mat-list>
       <mat-list-item *ngFor="let car of cars">
         <img mat-list-avatar src="{{car.giphyUrl}}" alt="{{car.name}}">
-        <h3 mat-line>
+        <h3>
           <a mat-button [routerLink]="['/car-edit', car.id]">{{car.name}}</a>
         </h3>
+        <h6 *ngIf="car.ownerDni">Owner Dni: {{car.ownerDni}}</h6>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
